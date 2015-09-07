@@ -11,7 +11,7 @@ public class Customer : MonoBehaviour {
 
 	void Start(){
 		//instantiate food here?
-		Vector3 foodSpawn = new Vector3 (transform.position.x, transform.position.y + 150, transform.position.z);
+		Vector3 foodSpawn = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
 		Instantiate (food, transform.position, Quaternion.identity);
 		foodName = food.name;
 		bar.GetComponent<Barfood> ().order (food);
