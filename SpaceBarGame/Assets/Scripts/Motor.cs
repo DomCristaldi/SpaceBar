@@ -34,7 +34,10 @@ public class Motor : MonoBehaviour {
     protected void HandleMovement() {
         Debug.DrawRay(tf.position, deliveredDirec, Color.red);
 
-        trueDirec = deliveredDirec;
+        Vector3 deliveredPoint = tf.position + deliveredDirec;
+        Vector3 truePoint = tf.position + trueDirec;
+        trueDirec = Vector3.MoveTowards(truePoint, deliveredPoint, redirectSpeed) - tf.position;
+        //trueDirec = deliveredDirec;
 
         Debug.DrawRay(tf.position, trueDirec, Color.blue);
 
