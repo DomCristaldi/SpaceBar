@@ -8,16 +8,13 @@ public class PlayerMotor : Motor {
     private Plane playerPlane;
 
     protected override void Update() {//perform all inputs before we run the motor
-        //base.Update();
 
         CalculatePlayerPlane();
 
         CalcMousePoint();
         InputPos(mousePoint);
 
-        //Debug.DrawLine(tf.position, mousePoint);
-
-        base.Update();
+        base.Update();//now we can run the motor
     }
 
     private void CalculatePlayerPlane() {
