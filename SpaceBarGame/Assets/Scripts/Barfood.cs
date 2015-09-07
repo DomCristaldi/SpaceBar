@@ -21,6 +21,7 @@ public class Barfood : MonoBehaviour {
 			for (int i=0; i<bar.Count; i++) {
 				Debug.Log(bar[i]);
 				if(bar[i].GetComponent<BarSection>().available == true){ //if spot is free, spawn food
+                    Debug.Log("boom");
 					bar[i].GetComponent<BarSection>().serve (food.Dequeue(), foodSpawn[i].transform.position);
 					break;
 				}
