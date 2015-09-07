@@ -5,13 +5,11 @@ using System.Collections.Generic;
 public class Barfood : MonoBehaviour {
 
 	public Queue<GameObject> food = new Queue<GameObject>(); //holds food that cant fit on bar
-	public List<bool> bar; //whether food is on that spot
+	public List<GameObject> bar; //whether food is on that spot
 	public List<GameObject> foodSpawn;
 
 	void Start(){
-		for (int i=0; i<bar.Count; i++) {
-			bar[i] = false;
-		}
+
 	}
 
 	//add to queue
@@ -24,13 +22,17 @@ public class Barfood : MonoBehaviour {
 	public void checkBar(){
 		if (food.Count > 0) {
 			for (int i=0; i<bar.Count; i++) {
-				if(bar[i] == false){ //if spot is free, spawn food
+				if(bar[i].GetComponent<BarSection>().available == false){ //if spot is free, spawn food
 					Instantiate(food.Dequeue(),foodSpawn[i].transform.position, Quaternion.identity);
-					bar[i] = true;
+					bar[i].GetComponent<BarSection>().available = true;
 					break;
 				}
 			}
 		}
+	}
+
+	public void pickup(){
+
 	}
 
 }
