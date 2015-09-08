@@ -5,9 +5,13 @@ using System.Collections.Generic;
 public class Barfood : MonoBehaviour {
 
 	public Queue<GameObject> food = new Queue<GameObject>(); //holds food that cant fit on bar
-	public List<GameObject> bar; //bar sections
 	public List<GameObject> foodSpawn;
+	public List<GameObject> barfood = new List<GameObject>();
+	GameObject tmp;
 
+	void Start(){
+
+	}
 
 	//add to queue
 	public void order(GameObject foodOrdered){
@@ -18,15 +22,25 @@ public class Barfood : MonoBehaviour {
 	//check if there is an empty spot on the bar
 	public void checkBar(){
 		if (food.Count > 0) {
-			for (int i=0; i<bar.Count; i++) {
-				Debug.Log(bar[i]);
-				if(bar[i].GetComponent<BarSection>().available == true){ //if spot is free, spawn food
-                    Debug.Log("boom");
-					bar[i].GetComponent<BarSection>().serve (food.Dequeue(), foodSpawn[i].transform.position);
+			for (int i=0; i<barfood.Count; i++) {
+				if (barfood [i] == null) {
+					tmp = food.Dequeue ();
+					barfood [i] = tmp;
+					Instantiate (tmp, foodSpawn [i].transform.position, Quaternion.identity);
 					break;
 				}
 			}
 		}
+	}
+
+	//for when food is picked up by the waitress
+	public void pickup(string name){
+		if (name == "bar1") {
+			barfood[0] = null;
+			//maybe destroy game obj
+			checkBar();
+		}
+		//etc for all bar partitions
 	}
 
 }
