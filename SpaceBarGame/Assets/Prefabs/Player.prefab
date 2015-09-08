@@ -178,7 +178,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &166990
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -186,7 +186,7 @@ GameObject:
   - 4: {fileID: 495066}
   - 136: {fileID: 13634436}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,7 +467,6 @@ Transform:
   m_Children:
   - {fileID: 414198}
   - {fileID: 433796}
-  - {fileID: 495066}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &414198
@@ -570,6 +569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490842}
+  - {fileID: 495066}
   m_Father: {fileID: 410384}
   m_RootOrder: 1
 --- !u!4 &446748
@@ -686,8 +686,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.19400001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 410384}
-  m_RootOrder: 2
+  m_Father: {fileID: 433796}
+  m_RootOrder: 1
 --- !u!4 &498586
 Transform:
   m_ObjectHideFlags: 1
