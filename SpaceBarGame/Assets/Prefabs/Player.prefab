@@ -366,7 +366,6 @@ GameObject:
   - 114: {fileID: 11466958}
   - 114: {fileID: 11493362}
   - 114: {fileID: 11497320}
-  - 114: {fileID: 11448292}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -464,8 +463,8 @@ Transform:
   m_LocalPosition: {x: -4.27064943, y: -.180000007, z: .794921875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 414198}
   - {fileID: 433796}
+  - {fileID: 414198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &414198
@@ -479,7 +478,7 @@ Transform:
   m_LocalScale: {x: .249900579, y: .249900579, z: .249900579}
   m_Children: []
   m_Father: {fileID: 410384}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &417760
 Transform:
   m_ObjectHideFlags: 1
@@ -570,7 +569,7 @@ Transform:
   - {fileID: 490842}
   - {fileID: 495066}
   m_Father: {fileID: 410384}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &446748
 Transform:
   m_ObjectHideFlags: 1
@@ -714,7 +713,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &9527366
 Animator:
@@ -755,19 +754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aee7a5e89c2ddc4084355a57d5f89e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11448292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e036a11c1c6cd1041822e8cdd040a473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renMapList: []
-  order: 0
 --- !u!114 &11466958
 MonoBehaviour:
   m_ObjectHideFlags: 1
