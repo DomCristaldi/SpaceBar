@@ -12,6 +12,7 @@ public class PlayerAnimController : MonoBehaviour {
     private Motor motor;
 
     public Transform playerModel;
+    public Animator animator;
 
     public facingDirection curFacingDirec;
 
@@ -29,6 +30,7 @@ public class PlayerAnimController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         HandleFacingDirec();
+        HandleAnimations();
 	}
 
     private void HandleFacingDirec() {
@@ -56,5 +58,16 @@ public class PlayerAnimController : MonoBehaviour {
                                                  playerModel.localScale.y,
                                                  playerModel.localScale.z);
         }
+    }
+
+    private void HandleAnimations() {
+        if (motor.curMoveSpeedType == Motor.moveSpeedType.idling) {
+            animator.SetBool("Walking", false);
+        }
+        if (motor.curMoveSpeedType == Motor.moveSpeedType.walking) {
+            animator.SetBool("Walking", true);
+        }
+
+        //if (motor.trueDirec.magnitude > motor.slow
     }
 }

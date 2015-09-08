@@ -9,15 +9,22 @@ public class Motor : MonoBehaviour {
         right,
     }
 
+    public enum moveSpeedType {
+        idling,
+        walking,
+    }
+
     protected Transform tf;
     protected Rigidbody rigBod;
 
     public facingDirection curFacingDirec;
+    public moveSpeedType curMoveSpeedType;
 
     public float maxMoveSpeed = 1.0f;
     public float redirectSpeed = 0.25f;
 
     public float slowDownDist = 0.2f;
+    public float stopDist = 0.05f;
 
     public Vector3 deliveredDirec;
     public Vector3 trueDirec;
@@ -60,10 +67,19 @@ public class Motor : MonoBehaviour {
     }
 
     public void InputDirec(Vector3 direc) {
-        deliveredDirec = Vector3.ClampMagnitude(direc, maxMoveSpeed);
+        
 
-        if (deliveredDirec.magnitude > slowDownDist) {
+        if (direc.magnitude > slowDownDist) {
             deliveredDirec = direc.normalized * maxMoveSpeed;
+            curMoveSpeedType = moveSpeedType.walking;
+        }
+        else if (direc.magnitude <= slowDownDist && direc.magnitude > stopDist) {
+            deliveredDirec = Vector3.ClampMagnitude(direc, maxMoveSpeed);
+            curMoveSpeedType = moveSpeedType.idling;
+        }
+        else {
+            deliveredDirec = Vector3.zero;
+            curMoveSpeedType = moveSpeedType.idling;
         }
     }
 }
