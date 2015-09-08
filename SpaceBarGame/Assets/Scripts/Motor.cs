@@ -17,6 +17,8 @@ public class Motor : MonoBehaviour {
     public float maxMoveSpeed = 1.0f;
     public float redirectSpeed = 0.25f;
 
+    public float slowDownDist = 0.2f;
+
     public Vector3 deliveredDirec;
     public Vector3 trueDirec;
 
@@ -34,7 +36,6 @@ public class Motor : MonoBehaviour {
 	
 	// Update is called once per frame
 	protected virtual void Update () {
-        HandleFacingDirec();
         HandleMovement();
 	}
 
@@ -44,19 +45,14 @@ public class Motor : MonoBehaviour {
         Vector3 deliveredPoint = tf.position + deliveredDirec;
         Vector3 truePoint = tf.position + trueDirec;
         trueDirec = Vector3.MoveTowards(truePoint, deliveredPoint, redirectSpeed) - tf.position;
+
+        //trueDirec = trueDirec.normalized * maxMoveSpeed;
+
         //trueDirec = deliveredDirec;
 
         Debug.DrawRay(tf.position, trueDirec, Color.blue);
 
         rigBod.velocity = new Vector3(trueDirec.x, 0.0f, trueDirec.z);
-    }
-
-    protected void HandleFacingDirec() {
-        //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.up);
-        
-        //Debug.Log(Vector3.Angle(Camera.main.transform.up, deliveredDirec));
-
-
     }
 
     public void InputPos(Vector3 pos) {
@@ -65,5 +61,9 @@ public class Motor : MonoBehaviour {
 
     public void InputDirec(Vector3 direc) {
         deliveredDirec = Vector3.ClampMagnitude(direc, maxMoveSpeed);
+
+        if (deliveredDirec.magnitude > slowDownDist) {
+            deliveredDirec = direc.normalized * maxMoveSpeed;
+        }
     }
 }
