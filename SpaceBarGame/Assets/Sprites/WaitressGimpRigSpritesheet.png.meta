@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: 13f11ee101e923245b9151e3ffda69ed
+timeCreated: 1441674311
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: Visor
+    21300004: Hair
+    21300006: BicepL
+    21300008: Chest
+    21300010: BicepR
+    21300012: Bow
+    21300014: ForearmL
+    21300016: ForearmR
+    21300018: Claw1L
+    21300020: WristL
+    21300022: Claw2L
+    21300024: Waist
+    21300026: WristR
+    21300028: Leg
+    21300030: Claw1R
+    21300032: Claw2R
+    21300034: Apron
+    21300036: Wheel
+    21300038: Hat
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Head
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 327
+        width: 34
+        height: 41
+      alignment: 9
+      pivot: {x: .699317932, y: .277715921}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Visor
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 340
+        width: 34
+        height: 25
+      alignment: 9
+      pivot: {x: .400000006, y: .589999974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hair
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 330
+        width: 46
+        height: 50
+      alignment: 9
+      pivot: {x: .469999999, y: .340000004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BicepL
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 282
+        width: 40
+        height: 27
+      alignment: 9
+      pivot: {x: .805009842, y: .664314568}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Chest
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 233
+        width: 61
+        height: 84
+      alignment: 9
+      pivot: {x: .454095304, y: .0761987567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BicepR
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 283
+        width: 26
+        height: 43
+      alignment: 9
+      pivot: {x: .351759702, y: .791309416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bow
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 293
+        width: 49
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ForearmL
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 252
+        width: 41
+        height: 16
+      alignment: 9
+      pivot: {x: .857084692, y: .416814804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ForearmR
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 230
+        width: 16
+        height: 41
+      alignment: 9
+      pivot: {x: .560222626, y: .848801792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Claw1L
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 234
+        width: 13
+        height: 11
+      alignment: 9
+      pivot: {x: .807142973, y: .197509766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WristL
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 227
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Claw2L
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 221
+        width: 16
+        height: 8
+      alignment: 9
+      pivot: {x: .818874359, y: .694095612}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Waist
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 165
+        width: 55
+        height: 62
+      alignment: 9
+      pivot: {x: .469999999, y: .959999979}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WristR
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 215
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Leg
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 143
+        width: 39
+        height: 64
+      alignment: 9
+      pivot: {x: .482936382, y: .850067854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Claw1R
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 198
+        width: 11
+        height: 13
+      alignment: 9
+      pivot: {x: .802487433, y: .824205816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Claw2R
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 195
+        width: 8
+        height: 16
+      alignment: 9
+      pivot: {x: .333629608, y: .818873405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Apron
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 151
+        width: 34
+        height: 34
+      alignment: 9
+      pivot: {x: .513048053, y: .878407657}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wheel
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 148
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hat
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 317
+        width: 58
+        height: 67
+      alignment: 9
+      pivot: {x: .360000014, y: .529999971}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
