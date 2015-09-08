@@ -208,6 +208,33 @@ MonoBehaviour:
   - {fileID: 161254, guid: d1a30c0ff9c65914eb87bce9b131424d, type: 2}
   food:
   - {fileID: 140520, guid: 4fe815d0c4c71b542badbe9ce13d5d5f, type: 2}
+--- !u!1 &119229166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 139422, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 119229167}
+  m_Layer: 0
+  m_Name: barFoodSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &119229167
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 460672, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119229166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .449999988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1120197663}
+  m_RootOrder: 1
 --- !u!1 &193926053
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,48 +325,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!1001 &253506674
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -8.27000046
-      objectReference: {fileID: 0}
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 446260, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &313716185
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +385,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &321873926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 196498, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 321873927}
+  m_Layer: 0
+  m_Name: barFoodSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &321873927
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 458714, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321873926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.63999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1120197663}
+  m_RootOrder: 0
 --- !u!1 &346344133
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +532,90 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1852237084}
   m_RootOrder: 2
+--- !u!1 &1120197662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 110394, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1120197663}
+  - 114: {fileID: 1120197664}
+  m_Layer: 0
+  m_Name: Bar
+  m_TagString: Bar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1120197663
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 415738, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1120197662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.27000046, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 321873927}
+  - {fileID: 119229167}
+  - {fileID: 1863615047}
+  - {fileID: 2003791578}
+  - {fileID: 1275564133}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!114 &1120197664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11428624, guid: 39257bb3fbfd81547bbf977ce3184c88,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1120197662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d375ee9b1e65946897ced7513b699a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodSpawn:
+  - {fileID: 321873926}
+  - {fileID: 119229166}
+  - {fileID: 1863615046}
+  - {fileID: 2003791577}
+  - {fileID: 1275564132}
+  barfood:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!1 &1275564132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 149596, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1275564133}
+  m_Layer: 0
+  m_Name: barFoodSpawn (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1275564133
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 470364, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1275564132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.44999981, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1120197663}
+  m_RootOrder: 4
 --- !u!1 &1567849702
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,3 +732,57 @@ Transform:
   - {fileID: 1117514119}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1863615046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 128126, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1863615047}
+  m_Layer: 0
+  m_Name: barFoodSpawn (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1863615047
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412962, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1863615046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.94000006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1120197663}
+  m_RootOrder: 2
+--- !u!1 &2003791577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 122780, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2003791578}
+  m_Layer: 0
+  m_Name: barFoodSpawn (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2003791578
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 485116, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003791577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.33999991, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1120197663}
+  m_RootOrder: 3

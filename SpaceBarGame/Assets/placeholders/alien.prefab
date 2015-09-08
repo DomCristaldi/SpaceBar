@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food: {fileID: 140520, guid: 4fe815d0c4c71b542badbe9ce13d5d5f, type: 2}
   foodName: 
-  bar: {fileID: 157044, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
+  bar: {fileID: 110394, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
 --- !u!212 &21208584
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -79,7 +79,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: bar
       value: 
-      objectReference: {fileID: 157044, guid: f69cadf8e2138dd42bcf69f83f7744cf, type: 2}
+      objectReference: {fileID: 110394, guid: 39257bb3fbfd81547bbf977ce3184c88, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 161254}
