@@ -362,12 +362,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 410384}
-  - 33: {fileID: 3305898}
-  - 23: {fileID: 2304922}
   - 54: {fileID: 5472048}
   - 114: {fileID: 11466958}
   - 114: {fileID: 11493362}
   - 114: {fileID: 11497320}
+  - 114: {fileID: 11448292}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -702,37 +701,6 @@ Transform:
   - {fileID: 421400}
   m_Father: {fileID: 463428}
   m_RootOrder: 0
---- !u!23 &2304922
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197478}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &3305898
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197478}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &5472048
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -787,6 +755,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aee7a5e89c2ddc4084355a57d5f89e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11448292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e036a11c1c6cd1041822e8cdd040a473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renMapList: []
+  order: 0
 --- !u!114 &11466958
 MonoBehaviour:
   m_ObjectHideFlags: 1
