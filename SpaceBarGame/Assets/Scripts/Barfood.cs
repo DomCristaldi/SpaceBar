@@ -17,19 +17,30 @@ public class Barfood : MonoBehaviour {
 	public void order(GameObject foodOrdered){
 		food.Enqueue (foodOrdered);
 		checkBar ();
-		//Instantiate(food.Dequeue(),foodSpawn[0].transform.position,Quaternion.identity);
 	}
 
 	//check if there is an empty spot on the bar
 	public void checkBar(){
-		for (int i=0; i<barfood.Count; i++) {
-			if(barfood[i] == null){
-				tmp = food.Dequeue();
-				barfood[i] = tmp;
-				Instantiate(tmp,foodSpawn[i].transform.position,Quaternion.identity);
-				break;
+		if (food.Count > 0) {
+			for (int i=0; i<barfood.Count; i++) {
+				if (barfood [i] == null) {
+					tmp = food.Dequeue ();
+					barfood [i] = tmp;
+					Instantiate (tmp, foodSpawn [i].transform.position, Quaternion.identity);
+					break;
+				}
 			}
 		}
+	}
+
+	//for when food is picked up by the waitress
+	public void pickup(string name){
+		if (name == "bar1") {
+			barfood[0] = null;
+			//maybe destroy game obj
+			checkBar();
+		}
+		//etc for all bar partitions
 	}
 
 }
