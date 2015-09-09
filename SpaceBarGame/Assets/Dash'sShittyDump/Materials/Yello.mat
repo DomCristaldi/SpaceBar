@@ -38,42 +38,66 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+<<<<<<< HEAD
           name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _OcclusionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _EmissionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DetailMask
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DetailAlbedoMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
+=======
           name: _MetallicGlossMap
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _OcclusionMap
+=======
+          name: _ParallaxMap
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _EmissionMap
+=======
+          name: _OcclusionMap
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _DetailMask
+=======
+          name: _EmissionMap
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _DetailAlbedoMap
+=======
+          name: _DetailMask
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _MetallicGlossMap
+=======
+          name: _DetailAlbedoMap
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -93,10 +117,13 @@ Material:
         second: .5
       data:
         first:
+<<<<<<< HEAD
           name: _Parallax
         second: .0199999996
       data:
         first:
+=======
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
           name: _ZWrite
         second: 1
       data:
@@ -105,10 +132,24 @@ Material:
         second: .5
       data:
         first:
+<<<<<<< HEAD
+=======
+          name: _Metallic
+        second: 0
+      data:
+        first:
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
           name: _BumpScale
         second: 1
       data:
         first:
+<<<<<<< HEAD
+=======
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
           name: _OcclusionStrength
         second: 1
       data:
@@ -123,10 +164,13 @@ Material:
         first:
           name: _Mode
         second: 0
+<<<<<<< HEAD
       data:
         first:
           name: _Metallic
         second: 0
+=======
+>>>>>>> b318c75edc662c8c4c8c1542edf147da5e1abda3
     m_Colors:
       data:
         first:
