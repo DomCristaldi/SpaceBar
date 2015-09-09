@@ -364,7 +364,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6099999, y: -.449999988, z: 2.49000001}
+  m_LocalPosition: {x: 1.05999994, y: 7.56399103e-08, z: -.109999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421588}
@@ -494,12 +494,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodThought: {fileID: 21230714}
-  food: {fileID: 125246, guid: e49482eb8e6bcc643a1e01d717d17a73, type: 2}
+  food: {fileID: 184538, guid: dcf3e41e2cf5699408423c7defa95bd1, type: 2}
   foodName: 
-  perferedFood: 5
+  perferedFood: 4
   bar: {fileID: 0}
   coll: {fileID: 6532374}
   scoreText: {fileID: 0}
+  moodController: {fileID: 11429062}
+  seatIndex: 4
 --- !u!114 &11454140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -560,7 +562,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21273584
@@ -808,6 +810,10 @@ Prefab:
       propertyPath: bar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moodController
+      value: 
+      objectReference: {fileID: 11429062}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159442}
