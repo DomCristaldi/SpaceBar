@@ -12,9 +12,10 @@ public class PlayerInteractionController : MonoBehaviour {
     Transform tf;
     Rigidbody rigBod;
 
+    public Transform foodAnchor;
+
     public InteractMode curInteractMode;
 
-    public bool hasFoodItem = false;
     public GameObject foodInHand = null;
 
     public KeyCode interactionKey = KeyCode.Space;
@@ -61,15 +62,25 @@ public class PlayerInteractionController : MonoBehaviour {
                 */
                 
                 //if (hasFoodItem == true) {
+            //CALL OUTSIDE FUNCTION FOR SWAPPING FOOD ITEM
                 if (foodInHand != null) {
-                    //CALL OUTSIDE FUNCTION FOR SWAPPING FOOD ITEM
+                    
+                    foodInHand.transform.parent = null;//unparent
+                    GameObject oldFood = foodInHand;
+                    
                     foodInHand = trig.transform.root.GetComponent<Barfood>().pickup(trig, foodInHand);
+
+                    oldFood.transform.position = foodInHand.transform.position;
                 }
+            //CALL OUTSIDE FUNCTION FOR GRABBING FROM BAR
                 else {
-                    //CALL OUTSIDE FUNCTION FOR GRABBING FROM BAR
+                    
                     foodInHand = trig.transform.root.GetComponent<Barfood>().pickup(trig);
                 }
-                
+
+                if (foodInHand != null) {
+                    ParentFoodToHand();
+                }
             }
             else if (curInteractMode == InteractMode.putDown) {
                 //CALL OUTSIDE FUNCTION FOR PLACING FOOD AT TABLE
@@ -93,5 +104,10 @@ public class PlayerInteractionController : MonoBehaviour {
                 curInteractMode = InteractMode.neutral;
             }
         }
+    }
+
+    private void ParentFoodToHand() {
+        foodInHand.transform.position = foodAnchor.position;
+        foodInHand.transform.parent = foodAnchor;
     }
 }
