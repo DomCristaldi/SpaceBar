@@ -41,6 +41,8 @@ public class Barfood : MonoBehaviour {
 				tmp = barfood [i]; //tmp var gets reference before food is set to null
 				barfood [i] = null;
 				checkBar (); //check bar queue
+
+                Debug.Log(tmp == null);
 				return tmp;
 			}
 		}

@@ -49,7 +49,7 @@ public class PlayerInteractionController : MonoBehaviour {
     private void HandleFood() {
         if (Input.GetKeyDown(interactionKey)) {
             if (curInteractMode == InteractMode.pickUp) {
-
+                /*
                 foodInHand = trig.gameObject.GetComponent<Barfood>().pickup(trig, foodInHand);
 
                 if (foodInHand != null) {
@@ -58,16 +58,18 @@ public class PlayerInteractionController : MonoBehaviour {
                 else {
                     hasFoodItem = false;
                 }
-
-                /*
-                if (hasFoodItem == true) {
+                */
+                
+                //if (hasFoodItem == true) {
+                if (foodInHand != null) {
                     //CALL OUTSIDE FUNCTION FOR SWAPPING FOOD ITEM
+                    foodInHand = trig.transform.parent.GetComponent<Barfood>().pickup(trig, foodInHand);
                 }
                 else {
                     //CALL OUTSIDE FUNCTION FOR GRABBING FROM BAR
-                    foodInHand = trig.gameObject.GetComponent<Barfood>().pickup(trig, foodInHand);
+                    foodInHand = trig.transform.parent.GetComponent<Barfood>().pickup(trig);
                 }
-                */
+                
             }
             else if (curInteractMode == InteractMode.putDown) {
                 //CALL OUTSIDE FUNCTION FOR PLACING FOOD AT TABLE
