@@ -38,11 +38,14 @@ public class PlayerAnimController : MonoBehaviour {
         facingPlane.SetNormalAndPosition(playerModel.right, transform.position);
 
     //SET THE FACING DIRECTION SETTING
-        if (facingPlane.GetSide(transform.position + motor.deliveredDirec)) {
-            curFacingDirec = facingDirection.right;
-        }
-        else {
-            curFacingDirec = facingDirection.left;
+        if (motor.curMoveSpeedType == Motor.moveSpeedType.walking) {
+
+            if (facingPlane.GetSide(transform.position + motor.deliveredDirec)) {
+                curFacingDirec = facingDirection.right;
+            }
+            else {
+                curFacingDirec = facingDirection.left;
+            }
         }
 
     //FLIP THE CHARACTER MODEL IF THE NOT ALREADY FACINT THE CORRECT DIRECTION
