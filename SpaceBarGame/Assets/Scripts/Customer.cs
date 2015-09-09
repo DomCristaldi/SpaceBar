@@ -44,10 +44,10 @@ public class Customer : MonoBehaviour {
 	//accessed when customer is given food
 	public void served(GameObject foo){
 		//if (foo.name == foodName) {
-        //if (foo.GetComponent<FoodType>().thisFoodType == perferedFood) {
+        if (foo.GetComponent<FoodType>().thisFoodType == perferedFood) {
 			//add to score, delete food and customer
 			Destroy(foo);
 			Destroy(gameObject);
-		//}
+		}
 	}
 }

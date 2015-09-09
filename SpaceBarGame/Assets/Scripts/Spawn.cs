@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -44,6 +45,10 @@ public class Spawn : MonoBehaviour {
 		int f = Random.Range (0,food.Count);
 		GameObject tmp = customers[c];
 		tmp.GetComponent<Customer>().food = food[f];
+        tmp.GetComponent<Customer>().perferedFood = food[f].GetComponent<FoodType>().thisFoodType;
+        //System.Array values = System.Enum.GetValues(typeof(FoodType.spaceFoodType));
+        //tmp.GetComponent<Customer>().perferedFood = (FoodType.spaceFoodType)values.GetValue(UnityEngine.Random.Range(0, values.Length));
+
 		Instantiate(tmp,spawnPoints[s].transform.position,Quaternion.identity);
 		seats [s] = true;
 	}
