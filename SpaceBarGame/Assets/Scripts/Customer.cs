@@ -10,7 +10,7 @@ public class Customer : MonoBehaviour {
 
 	public Collider coll;
 
-	public Text score;
+	public Text scoreText;
 
 	int tip;
 	float timer;
@@ -19,7 +19,7 @@ public class Customer : MonoBehaviour {
 	void Start(){
 		//instantiate food here?
 		bar = GameObject.FindGameObjectWithTag ("barobj");
-		score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text>();
+		scoreText = GameObject.FindGameObjectWithTag ("score").GetComponent<Text>();
 		//Vector3 foodSpawn = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
 		//Instantiate (food, transform.position, Quaternion.identity);
 		foodName = food.name;
@@ -40,8 +40,12 @@ public class Customer : MonoBehaviour {
 			Debug.Log (tip);
 		}
 	}
-
-	public void served(){
-
+	//accessed when customer is given food
+	public void served(GameObject foo){
+		if (foo.name == foodName) {
+			//add to score, delete food and customer
+			Destroy(foo);
+			Destroy(gameObject);
+		}
 	}
 }

@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Spawn : MonoBehaviour {
-
+	
 	public List<GameObject> spawnPoints;
 	public List<GameObject> customers;
 	public List<GameObject> food;
 	public List<bool>seats; //should be same size as spawn points .. keeps track of what seats are open
 
+	int count = 0;
+
 	//gametime
-	float timeLeft = 300;
+	float timeLeft = 60;
 	float spawntimer;
 
 	void Start(){
@@ -24,15 +26,21 @@ public class Spawn : MonoBehaviour {
 		}
 		//spawn customer every 5 secs
 		timeLeft -= Time.deltaTime;
-		if (spawntimer - timeLeft > 5) {
+		if (spawntimer - timeLeft > 5 && spawntimer > 0) {
 			spawn ();
 			spawntimer = timeLeft;
 		}
 	}
 
 	void spawn(){
+		count ++;
+		if (count > 11)
+			return;
 		int c = Random.Range (0,customers.Count);
 		int s = Random.Range(0,spawnPoints.Count);
+		while (seats[s] == true) {
+			s = Random.Range(0,spawnPoints.Count);
+		}
 		int f = Random.Range (0,food.Count);
 		GameObject tmp = customers[c];
 		tmp.GetComponent<Customer>().food = food[f];
