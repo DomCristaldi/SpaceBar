@@ -6,6 +6,7 @@ public class Customer : MonoBehaviour {
 
 	public GameObject food;
 	public string foodName;
+    public FoodType.spaceFoodType perferedFood;
 	public GameObject bar;
 
 	public Collider coll;
@@ -42,10 +43,11 @@ public class Customer : MonoBehaviour {
 	}
 	//accessed when customer is given food
 	public void served(GameObject foo){
-		if (foo.name == foodName) {
+		//if (foo.name == foodName) {
+        //if (foo.GetComponent<FoodType>().thisFoodType == perferedFood) {
 			//add to score, delete food and customer
 			Destroy(foo);
 			Destroy(gameObject);
-		}
+		//}
 	}
 }

@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 457182}
   - 114: {fileID: 11493086}
+  - 114: {fileID: 11468540}
   m_Layer: 0
   m_Name: Eyepizza
   m_TagString: Untagged
@@ -57,6 +58,18 @@ Transform:
   - {fileID: 445258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11468540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65190ab79a6ced54a8b86b0a41a661fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisFoodType: 4
 --- !u!114 &11493086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +113,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: thisFoodType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 184538}

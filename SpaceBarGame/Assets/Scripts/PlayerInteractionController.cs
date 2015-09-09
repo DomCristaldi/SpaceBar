@@ -12,9 +12,10 @@ public class PlayerInteractionController : MonoBehaviour {
     Transform tf;
     Rigidbody rigBod;
 
+    public Transform foodAnchor;
+
     public InteractMode curInteractMode;
 
-    public bool hasFoodItem = false;
     public GameObject foodInHand = null;
 
     public KeyCode interactionKey = KeyCode.Space;
@@ -61,19 +62,29 @@ public class PlayerInteractionController : MonoBehaviour {
                 */
                 
                 //if (hasFoodItem == true) {
+            //CALL OUTSIDE FUNCTION FOR SWAPPING FOOD ITEM
                 if (foodInHand != null) {
-                    //CALL OUTSIDE FUNCTION FOR SWAPPING FOOD ITEM
-                    foodInHand = trig.transform.parent.GetComponent<Barfood>().pickup(trig, foodInHand);
+                    
+                    foodInHand.transform.parent = null;//unparent
+                    GameObject oldFood = foodInHand;
+                    
+                    foodInHand = trig.transform.root.GetComponent<Barfood>().pickup(trig, foodInHand);
+
+                    oldFood.transform.position = foodInHand.transform.position;
                 }
+            //CALL OUTSIDE FUNCTION FOR GRABBING FROM BAR
                 else {
-                    //CALL OUTSIDE FUNCTION FOR GRABBING FROM BAR
-                    foodInHand = trig.transform.parent.GetComponent<Barfood>().pickup(trig);
+                    
+                    foodInHand = trig.transform.root.GetComponent<Barfood>().pickup(trig);
                 }
-                
+
+                if (foodInHand != null) {
+                    ParentFoodToHand();
+                }
             }
             else if (curInteractMode == InteractMode.putDown) {
                 //CALL OUTSIDE FUNCTION FOR PLACING FOOD AT TABLE
-                trig.transform.parent.gameObject.GetComponent<Customer>().served(foodInHand);
+                trig.transform.root.gameObject.GetComponent<Customer>().served(foodInHand);
             }
         }
     }
@@ -86,12 +97,17 @@ public class PlayerInteractionController : MonoBehaviour {
             if (trig.tag == "Bar") {
                 curInteractMode = InteractMode.pickUp;
             }
-            else if (trig.tag == "Customer" && hasFoodItem == true) {
+            else if (trig.tag == "Customer" && foodInHand != null) {
                 curInteractMode = InteractMode.putDown;
             }
             else {
                 curInteractMode = InteractMode.neutral;
             }
         }
+    }
+
+    private void ParentFoodToHand() {
+        foodInHand.transform.position = foodAnchor.position;
+        foodInHand.transform.parent = foodAnchor;
     }
 }
