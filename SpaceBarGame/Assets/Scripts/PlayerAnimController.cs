@@ -2,12 +2,15 @@
 using System.Collections;
 
 [RequireComponent(typeof(Motor))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerAnimController : MonoBehaviour {
 
     public enum facingDirection {
         left,
         right,
     }
+
+    public Rigidbody rigbod;
 
     private Motor motor;
 
@@ -19,6 +22,8 @@ public class PlayerAnimController : MonoBehaviour {
     private Plane facingPlane;
 
     void Awake() {
+        rigbod = GetComponent<Rigidbody>();
+
         motor = GetComponent<Motor>();
     }
 
@@ -64,10 +69,12 @@ public class PlayerAnimController : MonoBehaviour {
     }
 
     private void HandleAnimations() {
-        if (motor.curMoveSpeedType == Motor.moveSpeedType.idling) {
+        //if (motor.curMoveSpeedType == Motor.moveSpeedType.idling) {
+        if (rigbod.velocity.magnitude < motor.slowDownDist) {
             animator.SetBool("Walking", false);
         }
-        if (motor.curMoveSpeedType == Motor.moveSpeedType.walking) {
+        //if (motor.curMoveSpeedType == Motor.moveSpeedType.walking) {
+        else {
             animator.SetBool("Walking", true);
         }
 
