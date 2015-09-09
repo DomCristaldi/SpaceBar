@@ -494,12 +494,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodThought: {fileID: 21230714}
-  food: {fileID: 125246, guid: e49482eb8e6bcc643a1e01d717d17a73, type: 2}
+  food: {fileID: 115890, guid: 3621499509d62e9468759caf090ae85c, type: 2}
   foodName: 
-  perferedFood: 5
+  perferedFood: 3
   bar: {fileID: 0}
   coll: {fileID: 6532374}
   scoreText: {fileID: 0}
+  moodController: {fileID: 11429062}
 --- !u!114 &11454140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -808,6 +809,10 @@ Prefab:
       propertyPath: bar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moodController
+      value: 
+      objectReference: {fileID: 11429062}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159442}
