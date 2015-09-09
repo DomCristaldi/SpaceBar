@@ -47,21 +47,27 @@ public class PlayerInteractionController : MonoBehaviour {
         HandleFood();
 	}
 
+    private void CheckInteractMode() {
+        if (trig == null) {
+            curInteractMode = InteractMode.neutral;
+        }
+        else {
+            if (trig.tag == "Bar") {
+                curInteractMode = InteractMode.pickUp;
+            }
+            else if (trig.tag == "Customer" && foodInHand != null) {
+                curInteractMode = InteractMode.putDown;
+            }
+            else {
+                curInteractMode = InteractMode.neutral;
+            }
+        }
+    }
+
     private void HandleFood() {
         if (Input.GetKeyDown(interactionKey)) {
+        //PICK UP
             if (curInteractMode == InteractMode.pickUp) {
-                /*
-                foodInHand = trig.gameObject.GetComponent<Barfood>().pickup(trig, foodInHand);
-
-                if (foodInHand != null) {
-                    hasFoodItem = true;
-                }
-                else {
-                    hasFoodItem = false;
-                }
-                */
-                
-                //if (hasFoodItem == true) {
             //CALL OUTSIDE FUNCTION FOR SWAPPING FOOD ITEM
                 if (foodInHand != null) {
                     
@@ -82,26 +88,10 @@ public class PlayerInteractionController : MonoBehaviour {
                     ParentFoodToHand();
                 }
             }
+        //PUT DOWN
             else if (curInteractMode == InteractMode.putDown) {
                 //CALL OUTSIDE FUNCTION FOR PLACING FOOD AT TABLE
                 trig.transform.root.gameObject.GetComponent<Customer>().served(foodInHand);
-            }
-        }
-    }
-
-    private void CheckInteractMode() {
-        if (trig == null) {
-            curInteractMode = InteractMode.neutral;
-        }
-        else {
-            if (trig.tag == "Bar") {
-                curInteractMode = InteractMode.pickUp;
-            }
-            else if (trig.tag == "Customer" && foodInHand != null) {
-                curInteractMode = InteractMode.putDown;
-            }
-            else {
-                curInteractMode = InteractMode.neutral;
             }
         }
     }
