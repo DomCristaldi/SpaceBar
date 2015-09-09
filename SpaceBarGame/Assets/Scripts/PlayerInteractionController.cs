@@ -63,17 +63,17 @@ public class PlayerInteractionController : MonoBehaviour {
                 //if (hasFoodItem == true) {
                 if (foodInHand != null) {
                     //CALL OUTSIDE FUNCTION FOR SWAPPING FOOD ITEM
-                    foodInHand = trig.transform.parent.GetComponent<Barfood>().pickup(trig, foodInHand);
+                    foodInHand = trig.transform.root.GetComponent<Barfood>().pickup(trig, foodInHand);
                 }
                 else {
                     //CALL OUTSIDE FUNCTION FOR GRABBING FROM BAR
-                    foodInHand = trig.transform.parent.GetComponent<Barfood>().pickup(trig);
+                    foodInHand = trig.transform.root.GetComponent<Barfood>().pickup(trig);
                 }
                 
             }
             else if (curInteractMode == InteractMode.putDown) {
                 //CALL OUTSIDE FUNCTION FOR PLACING FOOD AT TABLE
-                trig.transform.parent.gameObject.GetComponent<Customer>().served(foodInHand);
+                trig.transform.root.gameObject.GetComponent<Customer>().served(foodInHand);
             }
         }
     }
@@ -86,7 +86,7 @@ public class PlayerInteractionController : MonoBehaviour {
             if (trig.tag == "Bar") {
                 curInteractMode = InteractMode.pickUp;
             }
-            else if (trig.tag == "Customer" && hasFoodItem == true) {
+            else if (trig.tag == "Customer" && foodInHand != null) {
                 curInteractMode = InteractMode.putDown;
             }
             else {

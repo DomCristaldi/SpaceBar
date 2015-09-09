@@ -26,8 +26,8 @@ public class Barfood : MonoBehaviour {
 			for (int i=0; i<barfood.Count; i++) {
 				if (barfood [i] == null) {
 					tmp = foodQ.Dequeue ();
-					barfood [i] = tmp;
-					Instantiate (tmp, foodSpawn [i].transform.position, Quaternion.identity);
+                    barfood[i] = (GameObject)Instantiate(tmp, foodSpawn[i].transform.position, Quaternion.identity);
+					//Instantiate (tmp, foodSpawn [i].transform.position, Quaternion.identity);
 					break;
 				}
 			}
