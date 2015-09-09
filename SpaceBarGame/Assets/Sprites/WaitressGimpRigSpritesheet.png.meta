@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 13f11ee101e923245b9151e3ffda69ed
-timeCreated: 1441674311
+timeCreated: 1441766704
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -24,6 +24,7 @@ TextureImporter:
     21300034: Apron
     21300036: Wheel
     21300038: Hat
+    21300040: BicepRTattoo
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -268,6 +269,16 @@ TextureImporter:
         height: 67
       alignment: 9
       pivot: {x: .360000014, y: .529999971}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BicepRTattoo
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 223
+        width: 26
+        height: 43
+      alignment: 9
+      pivot: {x: .351759702, y: .791309416}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
