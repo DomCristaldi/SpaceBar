@@ -40,9 +40,9 @@ public class Customer : MonoBehaviour {
 			Debug.Log (tip);
 		}
 	}
-
+	//accessed when customer is given food
 	public void served(GameObject foo){
-		if (foo == food) {
+		if (foo.name == foodName) {
 			//add to score, delete food and customer
 			Destroy(foo);
 			Destroy(gameObject);

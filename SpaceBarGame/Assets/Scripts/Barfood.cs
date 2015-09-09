@@ -35,22 +35,25 @@ public class Barfood : MonoBehaviour {
 	}
 
 	//for when food is picked up by the waitress
+	public GameObject pickup(Collider other){
+		for (int i=0; i<triggers.Count; i++) {
+			if (other == triggers[i]) { //if triggers are equal
+				tmp = barfood [i]; //tmp var gets reference before food is set to null
+				barfood [i] = null;
+				checkBar (); //check bar queue
+				return tmp;
+			}
+		}
+		return null;
+	}
+
+	//for when food is picked up by the waitress
 	public GameObject pickup(Collider other, GameObject inHand){
 		for (int i=0; i<triggers.Count; i++) {
-			if(inHand == null){
-				if (other == triggers[i]) { //if triggers are equal
-					tmp = barfood [i]; //tmp var gets reference before food is set to null
-					barfood [i] = null;
-					checkBar (); //check bar queue
-					return tmp;
-				}
-			}
-			else{
-				if (other == triggers[i]) { //if triggers are equal
-					tmp = barfood [i]; //tmp var gets reference before food is set to whats in the hand
-					barfood [i] = inHand;
-					return tmp;
-				}
+			if (other == triggers[i]) { //if triggers are equal
+				tmp = barfood [i]; //tmp var gets reference before food is set to whats in the hand
+				barfood [i] = inHand;
+				return tmp;
 			}
 		}
 		return null;

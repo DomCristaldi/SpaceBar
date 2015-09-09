@@ -34,7 +34,7 @@ public class Spawn : MonoBehaviour {
 
 	void spawn(){
 		count ++;
-		if (count == 12)
+		if (count > 11)
 			return;
 		int c = Random.Range (0,customers.Count);
 		int s = Random.Range(0,spawnPoints.Count);
