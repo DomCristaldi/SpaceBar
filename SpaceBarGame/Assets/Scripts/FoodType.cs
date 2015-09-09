@@ -14,4 +14,18 @@ public class FoodType : MonoBehaviour {
 
     public spaceFoodType thisFoodType;
 
+    public Sprite foodSprite;
+    public SpriteRenderer foodSpriteRen;
+
+    void Awake() {
+        //transform.GetComponentInChildren<SpriteRenderer>();
+        foreach (Transform tf in transform) {
+            if (tf.GetComponent<SpriteRenderer>() != null) {
+                foodSpriteRen = tf.GetComponent<SpriteRenderer>();
+
+                break;
+            }
+        }
+        
+    }
 }
