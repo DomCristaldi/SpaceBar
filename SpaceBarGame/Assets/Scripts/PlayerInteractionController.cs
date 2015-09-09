@@ -15,6 +15,7 @@ public class PlayerInteractionController : MonoBehaviour {
     public InteractMode curInteractMode;
 
     public bool hasFoodItem = false;
+    public GameObject foodInHand;
 
     public KeyCode interactionKey = KeyCode.Space;
 
@@ -53,10 +54,12 @@ public class PlayerInteractionController : MonoBehaviour {
                 }
                 else {
                     //CALL OUTSIDE FUNCTION FOR GRABBING FROM BAR
+                    foodInHand = trig.gameObject.GetComponent<Barfood>().pickup(trig);
                 }
             }
             else if (curInteractMode == InteractMode.putDown) {
                 //CALL OUTSIDE FUNCTION FOR PLACING FOOD AT TABLE
+                //trig.transform.parent.GetComponent<Customer>().served(
             }
         }
     }
