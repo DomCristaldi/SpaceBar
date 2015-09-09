@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisFoodType: 4
+  foodSprite: {fileID: 21300000, guid: 5047398684c65884da4e20e2c482e814, type: 3}
+  foodSpriteRen: {fileID: 0}
 --- !u!114 &11493086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,6 +120,11 @@ Prefab:
       propertyPath: thisFoodType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: foodSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5047398684c65884da4e20e2c482e814,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 184538}

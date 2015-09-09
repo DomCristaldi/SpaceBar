@@ -81,6 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisFoodType: 0
+  foodSprite: {fileID: 21300000, guid: bafac9696ba0eaa469ba72f4c1888996, type: 3}
+  foodSpriteRen: {fileID: 0}
 --- !u!212 &21216460
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,6 +120,11 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: foodSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bafac9696ba0eaa469ba72f4c1888996,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 104242}
