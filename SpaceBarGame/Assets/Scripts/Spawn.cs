@@ -7,6 +7,7 @@ public class Spawn : MonoBehaviour {
 	public List<GameObject> spawnPoints;
 	public List<GameObject> customers;
 	public List<GameObject> food;
+	public List<bool>seats; //should be same size as spawn points .. keeps track of what seats are open
 
 	//gametime
 	float timeLeft = 300;
@@ -36,5 +37,6 @@ public class Spawn : MonoBehaviour {
 		GameObject tmp = customers[c];
 		tmp.GetComponent<Customer>().food = food[f];
 		Instantiate(tmp,spawnPoints[s].transform.position,Quaternion.identity);
+		seats [s] = true;
 	}
 }

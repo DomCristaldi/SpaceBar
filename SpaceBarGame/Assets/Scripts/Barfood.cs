@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 public class Barfood : MonoBehaviour {
 
-	public Queue<GameObject> food = new Queue<GameObject>(); //holds food that cant fit on bar
+	public Queue<GameObject> foodQ = new Queue<GameObject>(); //holds food that cant fit on bar
 	public List<GameObject> foodSpawn;
 	public List<GameObject> barfood = new List<GameObject>();
+	public List<Collider> triggers;
 	GameObject tmp;
 
 	void Start(){
@@ -15,16 +16,16 @@ public class Barfood : MonoBehaviour {
 
 	//add to queue
 	public void order(GameObject foodOrdered){
-		food.Enqueue (foodOrdered);
+		foodQ.Enqueue (foodOrdered);
 		checkBar ();
 	}
 
 	//check if there is an empty spot on the bar
 	public void checkBar(){
-		if (food.Count > 0) {
+		if (foodQ.Count > 0) {
 			for (int i=0; i<barfood.Count; i++) {
 				if (barfood [i] == null) {
-					tmp = food.Dequeue ();
+					tmp = foodQ.Dequeue ();
 					barfood [i] = tmp;
 					Instantiate (tmp, foodSpawn [i].transform.position, Quaternion.identity);
 					break;
@@ -34,13 +35,16 @@ public class Barfood : MonoBehaviour {
 	}
 
 	//for when food is picked up by the waitress
-	public void pickup(string name){
-		if (name == "bar1") {
-			barfood[0] = null;
-			//maybe destroy game obj
-			checkBar();
+	public GameObject pickup(Collider other){
+		for (int i=0; i<triggers.Count; i++) {
+			if (other == triggers[i]) { //if triggers are equal
+				tmp = barfood [i]; //tmp var gets reference before food is set to null
+				barfood [i] = null;
+				checkBar (); //check bar queue
+				return tmp;
+			}
 		}
-		//etc for all bar partitions
+		return null;
 	}
 
 }

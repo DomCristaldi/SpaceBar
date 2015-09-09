@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Customer
   - Bar
+  - barobj
+  - score
   layers:
   - Default
   - TransparentFX

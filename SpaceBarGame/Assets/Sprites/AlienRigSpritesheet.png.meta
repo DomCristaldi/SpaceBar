@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: faa6636fe8d392c49881e2fec8927e74
+timeCreated: 1441760417
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Eye
+    21300002: StalkHappy
+    21300004: StalkAnnoyed
+    21300006: StalkAngry
+    21300008: Iris
+    21300010: Body
+    21300012: MouthHappy
+    21300014: MouthAnnoyed
+    21300016: MouthAngry
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Eye
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 216
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: StalkHappy
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 189
+        width: 37
+        height: 77
+      alignment: 9
+      pivot: {x: .600000024, y: .140000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: StalkAnnoyed
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 190
+        width: 37
+        height: 77
+      alignment: 9
+      pivot: {x: .600000024, y: .140000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: StalkAngry
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 190
+        width: 37
+        height: 77
+      alignment: 9
+      pivot: {x: .600000024, y: .140000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Iris
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 195
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Body
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 88
+        width: 53
+        height: 91
+      alignment: 9
+      pivot: {x: .469999999, y: .629999995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MouthHappy
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 127
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MouthAnnoyed
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 127
+        width: 31
+        height: 32
+      alignment: 9
+      pivot: {x: .600000024, y: .529999971}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MouthAngry
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 127
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: .560000002, y: .560000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
