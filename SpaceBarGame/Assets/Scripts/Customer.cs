@@ -15,6 +15,8 @@ public class Customer : MonoBehaviour {
 
 	public Text scoreText;
 
+	public AlienMoodController moodController;
+
 	int tip;
 	float timer;
 	float orig;
@@ -41,10 +43,19 @@ public class Customer : MonoBehaviour {
         //foodThought.sprite = food.GetComponent<FoodType>().foodSprite.sprite;
 		//every 5 secs, tip goes down by 1
 		timer -= Time.deltaTime;
-		if (orig - timer > 5) {
+		if (orig - timer > 2) {
 			tip-=1;
-			orig = timer;
-			Debug.Log (tip);
+			timer = orig;
+			//Debug.Log (tip);
+			if (tip <= 12 && tip > 5) {
+				moodController.SetAnnoyed();
+			}
+			else if (tip <= 5) {
+				moodController.SetAngry();
+			}
+			else if (tip <= 0) {
+				//***IMPLEMENT CUSTOMER LEAVING***
+			}
 		}
 	}
 	//accessed when customer is given food
