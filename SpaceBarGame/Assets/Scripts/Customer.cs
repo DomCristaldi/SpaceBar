@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class Customer : MonoBehaviour {
 
+    public SpriteRenderer foodThought;
+
 	public GameObject food;
 	public string foodName;
     public FoodType.spaceFoodType perferedFood;
@@ -29,10 +31,14 @@ public class Customer : MonoBehaviour {
 		tip = 20;
 		timer = 3000;
 		orig = 3000;
+
+        foodThought.sprite = food.GetComponent<FoodType>().foodSprite;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //Debug.Log(food.GetComponent<FoodType>().foodSpriteRen != null);
+        //foodThought.sprite = food.GetComponent<FoodType>().foodSprite.sprite;
 		//every 5 secs, tip goes down by 1
 		timer -= Time.deltaTime;
 		if (orig - timer > 5) {
@@ -44,10 +50,10 @@ public class Customer : MonoBehaviour {
 	//accessed when customer is given food
 	public void served(GameObject foo){
 		//if (foo.name == foodName) {
-        //if (foo.GetComponent<FoodType>().thisFoodType == perferedFood) {
+        if (foo.GetComponent<FoodType>().thisFoodType == perferedFood) {
 			//add to score, delete food and customer
 			Destroy(foo);
 			Destroy(gameObject);
-		//}
+		}
 	}
 }
