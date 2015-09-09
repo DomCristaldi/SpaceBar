@@ -52,6 +52,7 @@ public class Customer : MonoBehaviour {
 		//if (foo.name == foodName) {
         if (foo.GetComponent<FoodType>().thisFoodType == perferedFood) {
 			//add to score, delete food and customer
+            ScoreHandler.singleton.AddTip(tip);
 			Destroy(foo);
 			Destroy(gameObject);
 		}

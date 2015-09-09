@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ScoreHandler : MonoBehaviour {
 
     public static ScoreHandler singleton;
+
+    public Text uiScoreSlot;
 
     public int score = 0;
 
@@ -20,7 +23,7 @@ public class ScoreHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        uiScoreSlot.text = score.ToString();
 	}
 
     public void AddTip(int amount) {
