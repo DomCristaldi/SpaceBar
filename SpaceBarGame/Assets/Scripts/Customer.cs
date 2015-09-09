@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Customer : MonoBehaviour {
 
@@ -7,14 +8,19 @@ public class Customer : MonoBehaviour {
 	public string foodName;
 	public GameObject bar;
 
+	public Collider coll;
+
+	public Text score;
+
 	int tip;
 	float timer;
 	float orig;
 
 	void Start(){
 		//instantiate food here?
-		bar = GameObject.FindGameObjectWithTag ("Bar");
-		Vector3 foodSpawn = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
+		bar = GameObject.FindGameObjectWithTag ("barobj");
+		score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text>();
+		//Vector3 foodSpawn = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
 		//Instantiate (food, transform.position, Quaternion.identity);
 		foodName = food.name;
 		bar.GetComponent<Barfood> ().order (food);
@@ -33,5 +39,9 @@ public class Customer : MonoBehaviour {
 			orig = timer;
 			Debug.Log (tip);
 		}
+	}
+
+	public void served(){
+
 	}
 }
