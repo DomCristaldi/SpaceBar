@@ -17,6 +17,8 @@ public class Customer : MonoBehaviour {
 
 	public AlienMoodController moodController;
 
+	public int seatIndex;
+
 	int tip;
 	float timer;
 	float orig;
@@ -47,15 +49,7 @@ public class Customer : MonoBehaviour {
 			tip-=1;
 			timer = orig;
 			//Debug.Log (tip);
-			if (tip <= 12 && tip > 5) {
-				moodController.SetAnnoyed();
-			}
-			else if (tip <= 5) {
-				moodController.SetAngry();
-			}
-			else if (tip <= 0) {
-				//***IMPLEMENT CUSTOMER LEAVING***
-			}
+			CheckTip();
 		}
 	}
 	//accessed when customer is given food
@@ -64,7 +58,26 @@ public class Customer : MonoBehaviour {
         if (foo.GetComponent<FoodType>().thisFoodType == perferedFood) {
 			//add to score, delete food and customer
             ScoreHandler.singleton.AddTip(tip);
+			Spawn.singleton.freeSeat(seatIndex);
 			Destroy(foo);
+			Destroy(gameObject);
+		}
+		else {
+			tip -= 3;
+			CheckTip();
+		}
+	}
+
+	void CheckTip () {
+		if (tip <= 12 && tip > 5) {
+			moodController.SetAnnoyed();
+		}
+		else if (tip <= 5 && tip > 0) {
+			moodController.SetAngry();
+		}
+		else if (tip <= 0) {
+			ScoreHandler.singleton.AddTip(-10);
+			Spawn.singleton.freeSeat(seatIndex);
 			Destroy(gameObject);
 		}
 	}
